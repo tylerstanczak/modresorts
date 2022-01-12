@@ -7,12 +7,13 @@
 FROM maven:3.3-jdk-8 as builder
 WORKDIR /git
 COPY . /git
-RUN mvn clean install
+RUN mvn clean package
 
 FROM ibmcom/websphere-traditional:8.5.5.17-ubi
 
+# put build artifact (OutputDirectory path in pom.xml) in /work/config
 # put app and scripts and properties in /work/config
-# put external library (e.g db driver) in /work/config/lib
+# put external libraries (e.g db drivers) in /work/config/lib
 COPY --from=builder --chown=was:root /git/data/examples/*.war /work/config/
 COPY --chown=was:root ./src/config /work/config
 COPY --chown=was:root ./lib /work/config/lib
