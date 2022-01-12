@@ -31,5 +31,5 @@ AdminConfig.create('Library', Server, [['name', 'globalSharedLibrary'], ['classP
 appServer = AdminConfig.list('ApplicationServer',Server)
 classLoader1 = AdminConfig.create('Classloader', appServer, [['mode',  'PARENT_FIRST']])
 AdminConfig.create('LibraryRef', classLoader1, [['libraryName', 'globalSharedLibrary']])
-#AdminApp.install('/path/to/modresorts-1.0.war', ["-node", NodeName, "-server", "server1", "-appname", "modresorts-1.0.war", "-contextroot", "/resorts", "-CtxRootForWebMod", [["modresorts-1.0.war", "modresorts-1.0.war,WEB-INF/web.xml", "/resorts"]]])
+AdminApp.install('/work/config/modresorts-1.0.war', ["-node", NodeName, "-server", "server1", "-appname", "modresorts-1.0.war", "-contextroot", "/resorts", "-CtxRootForWebMod", [["modresorts-1.0.war", "modresorts-1.0.war,WEB-INF/web.xml", "/resorts"]]])
 AdminConfig.save()
