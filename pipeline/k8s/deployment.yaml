@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: defaultapplication
+  name: defaultapplication
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: defaultapplication
+  template:
+    metadata:
+      labels:
+        app: defaultapplication
+    spec:
+      containers:
+        - image: image-registry.openshift-image-registry.svc:5000/myproject/defaultapplication:latest
+          imagePullPolicy: Always
+          name: defaultapplication
+          ports:
+            - containerPort: 9080
+              protocol: TCP
