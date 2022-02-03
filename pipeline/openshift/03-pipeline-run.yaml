@@ -17,4 +17,4 @@ spec:
   - name: repo-dockerfile
     value: Dockerfile
   - name: image-url
-    value: image-registry.openshift-image-registry.svc:5000/myproject/defaultapplication:latest
+    value: image-registry.openshift-image-registry.svc:5000/modresorts/modresorts:latest
