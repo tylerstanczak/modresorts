@@ -15,7 +15,7 @@ spec:
         app: defaultapplication
     spec:
       containers:
-        - image: image-registry.openshift-image-registry.svc:5000/myproject/defaultapplication:latest
+        - image: image-registry.openshift-image-registry.svc:5000/modresorts/modresorts:latest
           imagePullPolicy: Always
           name: defaultapplication
           ports:
