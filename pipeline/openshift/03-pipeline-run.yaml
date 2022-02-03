@@ -11,7 +11,7 @@ spec:
       claimName: shared-task-storage
   params:
   - name: repo-url
-    value: https://github.com/IBMTechSales/TA-klp-demo.git
+    value: https://github.com/tylerstanczak/modresorts.git
   - name: branch-name
     value: master
   - name: repo-dockerfile
