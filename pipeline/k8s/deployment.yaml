@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: defaultapplication
-  name: defaultapplication
+    app: modresorts
+  name: modresorts
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: defaultapplication
+      app: modresorts
   template:
     metadata:
       labels:
-        app: defaultapplication
+        app: modresorts
     spec:
       containers:
         - image: image-registry.openshift-image-registry.svc:5000/modresorts/modresorts:latest
           imagePullPolicy: Always
-          name: defaultapplication
+          name: modresorts
           ports:
             - containerPort: 9080
               protocol: TCP
