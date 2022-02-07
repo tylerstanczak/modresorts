@@ -73,7 +73,7 @@ spec:
       name: update-deployment
     params:
     - name: deployment
-      value: "defaultapplication"
+      value: "modresorts"
     - name: image-url
       value: $(params.image-url)
     runAfter:
